@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body %}
+	
+	<article>
+		<div class="container">	
+
+			<div class="main-title">
+			
+				PRZEGLĄDAJ BILANS
+			
+			</div>
+			
+		<div class="period"> 
+			<select id="chooseBalancePeriod" name="chooseBalancePeriod" class="chooseBalancePeriod" style="cursor: pointer;" onchange="choosingPeriod()" >
+				<option value="1" 
+				
+				>bieżący miesiąc</option>
+				<option value="2" 
+				
+				>poprzedni miesiąc</option>
+				<option value="3"
+				
+				>bieżący rok</option>
+				<option value="4"
+				
+				>niestandardowy</option>
+			</select>
+		</div>
+		
+			
+			<div id="result"></div>
+				<div class="row col-12">
+				
+					<div  class="table-transactions table col-md-6">
+					
+					<div class="title-of-category"> 
+						<!--<h5>PRZYCHODY</h5>-->
+				
+						<input type="button" style="cursor: pointer;" name="view" data-toggle="modal5" data-target="#dataModal5" value="PRZYCHODY" id="all_incomes" class="btn btn-secondary btn-lg btn-rounded view_allIncomes">
+						
+						
+						
+					</div>
+					</br>
+							
+							
+
+							
+							</table>
+							
+							<div class="balanceSum" style="color:black">
+							
+							
+									
+							</div>
+							
+							
+					</div>
+					
+					<div class="table-transactions table col-md-6">
+					
+					
+					
+						<div class="title-of-category"> 
+							<!--<h5>WYDATKI</h5>-->
+							<input type="button" style="cursor: pointer;" name="view" data-toggle="modal3" data-target="#dataModal3" value="WYDATKI" id="all_expenses" class="btn btn-secondary btn-lg btn-rounded view_allExpenses"
+							
+							>
+						</div>
+						</br>
+						
+							
+									  
+							</table>
+
+							<div class="balanceSum" style="color:black">
+									
+							</div>
+							
+							
+							
+					</div>
+					
+				</div>
+					
+		</div>
+	</article>
+	
+	<div id="dataModal" class="modal hide">  
+       <div class="modal-dialog">
+		<div class="modal-content">
+           
+                <div class="modal-header"  id="Category"></div>  
+                <div class="modal-body" id="incomes_detail"></div>  
+                <div class="modal-footer">  
+                     <button type="button" class="btn btn-default" data-dismiss="modal" >Zamknij</button>  
+                </div>  
+           </div>
+      </div>  
+ </div>  
+	
+<div id="dataModal2" class="modal hide">  
+     <div class="modal-dialog">
+		<div class="modal-content">
+           
+                <div class="modal-header"  id="Category2"></div>  
+                <div class="modal-body" id="expenses_detail"></div>  
+                <div class="modal-footer">  
+                     <button type="button" class="btn btn-default" data-dismiss="modal" >Zamknij</button>  
+                </div>  
+           </div>
+      </div>  
+ </div>  
+ 
+ <div id="dataModal3" class="modal hide">  
+     <div class="modal-dialog">
+		<div class="modal-content">
+           
+                <div class="modal-header"  id="allIncomes"></div>  
+                <div class="modal-body" id="allincomes_detail"></div>  
+                <div class="modal-footer">  
+                     <button type="button" class="btn btn-default" data-dismiss="modal" >Zamknij</button>  
+                </div>  
+           </div>
+      </div>  
+ </div>  
+ 
+ <div id="dataModal4" class="modal hide">  
+     <div class="modal-dialog">
+		<div class="modal-content">
+           
+                <div class="modal-header"  id="allExpenses"></div>  
+                <div class="modal-body" id="allexpenses_detail"></div>  
+                <div class="modal-footer">  
+                     <button type="button" class="btn btn-default" data-dismiss="modal" >Zamknij</button>  
+                </div>  
+           </div>
+      </div>  
+ </div>  
+ 
+ <div id="dataModal5" class="modal hide">  
+     <div class="modal-dialog">
+		<div class="modal-content">
+           
+                <div class="modal-header"  id="Category"></div>  
+                <div class="modal-body" id="incomes_detail"></div>  
+                <div class="modal-footer">  
+                     <button type="button" class="btn btn-default" data-dismiss="modal" >Zamknij</button>  
+                </div>  
+           </div>
+      </div>  
+ </div>  
+ 
+ {% endblock %}
