@@ -19,7 +19,7 @@ class GeneralFunctions extends \Core\Model
     }
 	
 	
-	public function getToday()
+	public static function getToday()
 	{
 		$month = date('m');
 		$day = date('d');

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Expense{% endblock %}
+
+{% block body %}
+
+<article>	
+	<div class="container">	
+
+		<div class="main-title">
+			ADD EXPENSE
+			
+		</div>
+		
+		<form method="post">	
+			<div class="income-container col-md-12">
+			
+				<div class="box3 col-md-3 amountDate table-transactions">
+					<fieldset class="field_set">
+						<legend><b>AMOUNT</b></legend>
+						<input type="number" min="0.00"  step="0.01" name="money" class="inputAmountDate" />
+					</fieldset>
+										
+					<fieldset class="field_set">
+						<legend><b>DATE</b></legend>
+						<input type="date" name="date" class="inputAmountDate" value="TUTAJ USTAWIC DZISIAJ" />
+					</fieldset>
+					
+					<fieldset class="field_set">
+						<legend><b>WAY OF PAYMENT</b></legend>
+							<select id="way-of-payment" name="way-of-payment">
+								
+							</select>
+					</fieldset>						
+											
+				</div>
+				<div class="space" style="float:left;"></div>	
+					
+				<div class="box2 col-md-5 category  table-transactions column">
+					<fieldset class="field_set">
+						
+						<legend class="name-of-area"><b>CATEGORY</b></legend>
+						
+							<div class="column col-xs-6">
+								
+								<div class="space"></div>
+							</div>
+					</fieldset>
+					
+				</div>
+				
+				<div class="space" style="float:left;"></div>	
+				
+				<div class="box col-md-3 comment table-transactions">
+					<fieldset class="field_set ">
+						
+							<label><br/>
+								<textarea placeholder="Add comment..." class=" textinput" name="comment" ></textarea>
+									</label><br/>
+										
+					</fieldset>
+					
+				</div>
+			
+			</div>
+			
+			<div class="row col-12">
+					<div class="submitBox">
+						<input type="submit"  name="submit" value="Add">
+						<a href="add-expense.php"><input type="button" id="anuluj" value="Reset" >
+					</div>
+			</div>
+		</form>	
+	</div>
+</article>
+
+{% endblock %}
